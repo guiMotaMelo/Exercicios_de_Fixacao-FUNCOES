@@ -9,3 +9,5 @@ INSERT INTO nomes (nome) VALUES
     ('João');
 
 SELECT UPPER(nome) AS nome_maiusculo FROM nomes;
+
+SELECT nome, LENGTH(nome) AS tamanho FROM nomes;
