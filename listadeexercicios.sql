@@ -70,3 +70,19 @@ SELECT
         ELSE 'Caro'
     END AS categoria_preco
 FROM produtos;
+
+DELIMITER //
+CREATE PROCEDURE calcular_fatorial(IN numero INT, OUT resultado INT)
+BEGIN
+  DECLARE i INT DEFAULT 1;
+  DECLARE fatorial INT DEFAULT 1;
+  
+  WHILE i <= numero DO
+    SET fatorial = fatorial * i;
+    SET i = i + 1;
+  END WHILE;
+  
+  SET resultado = fatorial;
+END;
+//
+DELIMITER ;
