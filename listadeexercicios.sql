@@ -11,3 +11,10 @@ INSERT INTO nomes (nome) VALUES
 SELECT UPPER(nome) AS nome_maiusculo FROM nomes;
 
 SELECT nome, LENGTH(nome) AS tamanho FROM nomes;
+
+SELECT
+    CASE
+        WHEN nome LIKE 'João%' THEN 'Sr. ' || nome
+        ELSE 'Sra. ' || nome
+    END AS nome_com_tratamento
+FROM nomes;
