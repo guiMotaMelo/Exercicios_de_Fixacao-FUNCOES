@@ -56,3 +56,8 @@ SELECT
     data_evento,
     DAYNAME(data_evento) AS nome_dia_semana
 FROM eventos;
+
+SELECT
+    produto,
+    IF(quantidade > 0, 'Em estoque', 'Fora de estoque') AS status_estoque
+FROM produtos;
