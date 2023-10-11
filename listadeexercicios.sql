@@ -7,3 +7,5 @@ INSERT INTO nomes (nome) VALUES
     ('Roberto'),
     ('Maria Clara'),
     ('João');
+
+SELECT UPPER(nome) AS nome_maiusculo FROM nomes;
